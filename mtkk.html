@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- My CSS -->
+    <style>
+      * {
+        font-family: "Poppins" sans-serif;
+      }
+
+      .divawal {
+        padding-top: 2rem;
+        background-color: rgb(223, 194, 194);
+      }
+
+      .flex {
+        max-width: 100%; /* Lebar pembungkus card dan proyek */
+        margin: 20px auto; /* Margin otomatis untuk center */
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 7px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card {
+        float: left; /* Menggunakan float untuk menyusun di sebeah kiri */
+        width: 20%; /* Lebar Card Profile */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 7px;
+        margin-right: 5px; /* Jarak ke proyek */
+      }
+
+      .project {
+        float: left;
+        width: 80%; /* Lebar Proyek */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 7px;
+      }
+
+      .containerjudul {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        border: 1px solid #000;
+        border-radius: 20px;
+        background-color: #c27a7a;
+        color: #000;
+        box-shadow: 3px -2px 4px rgb(157, 157, 157);
+      }
+
+      .isi {
+        margin-bottom: 30px;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #000;
+        padding: 3px;
+        box-shadow: 0px 0px 7px rgb(179, 81, 81);
+      }
+
+      input[type="number"] {
+        background-color: #fff;
+        padding: 10px;
+        font-size: 11px;
+      }
+
+      button {
+        padding: 4px;
+        margin-top: 10px;
+        cursor: pointer;
+        background-color: rgb(209, 27, 27);
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: rgb(159, 25, 25);
+        box-shadow: 0px 3px 3px rgb(0, 0, 0, 0.3);
+      }
+    </style>
+    <!-- Akhir CSS -->
+
+    <title>My Web | Ilma Fadilah</title>
+
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow">
+      <div class="container">
+        <a class="navbar-brand" href="#">Ilma Fadilah</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Div Awal -->
+    <div class="divawal text-center">
+      <img src="D:/project/black.jpg" alt="Ilma Fadilah" width="200" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4">Ilma Fadilah</h1>
+      <p class="lead">I'm a Photographer | Web Designer</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,160L48,144C96,128,192,96,288,101.3C384,107,480,149,576,192C672,235,768,277,864,261.3C960,245,1056,171,1152,144C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <!-- Akhir Div Awal -->
+
+    <!-- Flex(kiri dan kanan) -->
+    <div class="flex">
+      <!-- Card Profile -->
+      <div class="card" style="width: 15rem">
+        <img src="D:/project/black.jpg" class="card-img-top" alt="Ilma Fadilah" />
+        <div class="card-body">
+          <h5 class="card-title text-decoration-underline">About Me</h5>
+          <p class="card-text">Name: Ilma Fadilah<br />Class: XII TKJ 1<br />School: SMKN 1 NGLEGOK<br />NISN: 0068509764</p>
+        </div>
+      </div>
+      <!-- Akhir Card -->
+
+      <!-- Program Mtk -->
+      <div class="project">
+        <h1 style="text-decoration: underline">Projects</h1>
+        <div class="containerjudul">
+          <h2>Bilangan Prima dari 1 hingga 500</h2>
+        </div>
+        <div class="isi">
+          <p>Masukkan Angka:</p>
+          <input type="number" id="primeInput" placeholder="Masukkan Angka" />
+          <button onclick="checkPrime()">Hitung</button>
+          <p id="primeResult"></p>
+        </div>
+
+        <div class="containerjudul">
+          <h2>Hitung Faktorial</h2>
+        </div>
+        <div class="isi">
+          <p>Masukkan angka:</p>
+          <input type="number" id="factorialInput" min="0" placeholder="Masukkan Angka" />
+          <button onclick="calculateFactorial()">Hitung</button>
+          <p id="factorialResult"></p>
+        </div>
+
+        <div class="containerjudul">
+          <h2>Hitung Luas Lingkaran</h2>
+        </div>
+        <div class="isi">
+          <p>Masukkan jari-jari:</p>
+          <input type="number" id="circleRadius" min="0" step="0.01" placeholder="Masukkan Angka" />
+          <button onclick="calculateArea()">Hitung</button>
+          <p id="circleAreaResult"></p>
+        </div>
+
+        <div class="containerjudul">
+          <h2>Permainan Tebak Angka</h2>
+        </div>
+        <div class="isi">
+          <p>Masukkan tebakan Anda:</p>
+          <input type="number" id="guessNumber" placeholder="Masukkan Angka" />
+          <button onclick="checkGuess()">Tebak</button>
+          <p id="guessResult"></p>
+        </div>
+
+        <div class="containerjudul">
+          <h2>Bilangan Prima dengan Modifikasi</h2>
+        </div>
+        <div class="isi">
+          <p>Masukkan Bilangan Prima:</p>
+          <input type="number" id="modified" placeholder="Masukkan Angka" />
+          <button onclick="findAndModifyPrime()">Hitung</button>
+          <p id="modifiedResult"></p>
+        </div>
+      </div>
+      <!-- Akhir Program Mtk -->
+    </div>
+    <!-- Akhir Flex(kiri dan kanan) -->
+
+    <!-- Script Program Mtk -->
+    <script>
+      // Program 1: Bilangan Prima dari 1 hingga 500
+      function checkPrime() {
+        let num = parseInt(document.getElementById("primeInput").value);
+        if (isNaN(num) || num <= 1) {
+          document.getElementById("primeResult").innerText = "0 dan 1 bukan bilangan prima";
+          return;
+        }
+
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+
+        if (isPrime) {
+          document.getElementById("primeResult").innerText = `${num} adalah bilangan prima.`;
+        } else {
+          document.getElementById("primeResult").innerText = `${num} bukan bilangan prima.`;
+        }
+      }
+
+      // Program 2: Hitung Faktorial
+      function calculateFactorial() {
+        let num = parseInt(document.getElementById("factorialInput").value);
+        if (isNaN(num) || num < 0) {
+          document.getElementById("factorialResult").innerText = "Masukkan angka yang valid!";
+          return;
+        }
+
+        let factorial = 1;
+        for (let i = 1; i <= num; i++) {
+          factorial *= i;
+        }
+
+        document.getElementById("factorialResult").innerText = `Faktorial dari ${num} adalah ${factorial}.`;
+      }
+
+      // Program 3: Hitung Luas Lingkaran
+      function calculateArea() {
+        let radius = parseFloat(document.getElementById("circleRadius").value);
+        if (isNaN(radius) || radius < 0) {
+          document.getElementById("circleAreaResult").innerText = "Masukkan jari-jari yang valid!";
+          return;
+        }
+
+        let area = Math.PI * Math.pow(radius, 2);
+        document.getElementById("circleAreaResult").innerText = `Luas lingkaran dengan jari-jari ${radius} adalah ${area.toFixed(2)}.`;
+      }
+
+      // Program 4: Permainan Tebak Angka
+      let hiddenNumber = Math.floor(Math.random() * 100) + 1;
+
+      function checkGuess() {
+        let guess = parseInt(document.getElementById("guessNumber").value);
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          document.getElementById("guessResult").innerText = "Masukkan angka yang valid antara 1 dan 100!";
+          return;
+        }
+
+        if (guess < hiddenNumber) {
+          document.getElementById("guessResult").innerText = "Tebakan Anda terlalu rendah!";
+        } else if (guess > hiddenNumber) {
+          document.getElementById("guessResult").innerText = "Tebakan Anda terlalu tinggi!";
+        } else {
+          document.getElementById("guessResult").innerText = "Selamat! Anda menebak angka yang benar!";
+        }
+      }
+
+      // Program 5: Bilangan Prima dengan Modifikasi
+      function findAndModifyPrime() {
+        let num = parseFloat(document.getElementById("modified").value);
+        if (isNaN(num) || num <= 1) {
+          document.getElementById("modifiedResult").innerText = "Masukkan angka bulat positif yang lebih besar dari 1!";
+          return;
+        }
+
+        let isPrime = true;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        let containsOne = num.toString().includes("1");
+
+        if (isPrime) {
+          let resultText = `${num} adalah bilangan prima!`;
+          if (containsOne) {
+            resultText += " dan";
+          }
+          document.getElementById("modifiedResult").innerText = resultText;
+        } else {
+          document.getElementById("modifiedResult").innerText = `${num} bukan bilangan prima.`;
+        }
+      }
+    </script>
+    <!-- Akhir Script Ptogram Mtk -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
