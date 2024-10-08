@@ -11,8 +11,15 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+    <!--jQuery Validation-->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
     <!-- My CSS -->
     <style>
+      label.error {
+        color: red;
+        font-size: 12p;
+      }
       * {
         font-family: "Poppins" sans-serif;
       }
@@ -29,7 +36,7 @@
         float: left; /* Menggunakan float untuk menyusun di sebeah kiri */
         width: 20%; /* Lebar Card Profile */ 
         padding: 20px;
-        background: linear-gradient(to bottom, #ce4042 0%, #a22788 40%);
+        background: linear-gradient(to bottom, #ce4042, #551871);
         border-radius: 7px; 
         color: #fff;
         box-shadow: 0 0 5px #000;
@@ -141,16 +148,13 @@
       #bgfooter {
         background-color: #c42f32;
       }
-
-      
     </style>
     <!-- Akhir CSS -->
-
     <title>My Web | Ilma Fadilah</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow-sm fixed-top"> <!--bootstrap using fixed samam seperti position sticky--> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow-sm fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#about">Ilma Fadilah</a> 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -238,7 +242,7 @@
     </script>
     <!-- Akhir jQuery script -->
 
-    <!-- Card Profile -->
+    <!-- Card Profile --> 
     <div class="card sticky-card"> 
       <img id="about" src="D:/project/photo.jpeg" class="rounded-circle" width="170px" alt="Ilma Fadilah" />
       <div class="card-body">
@@ -315,7 +319,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <form action="">
+            <form action=""  id="contactform">
               <div class="mb-3">
                 <label for="name" class="form-label" style="color: #fff;">Nama Lengkap</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" autocomplete="off" />
@@ -335,6 +339,47 @@
       </div>
     </section>
     <!-- Akhir contact -->
+
+    <!-- Script jQuery Validation -->
+    <script>
+      $(document).ready(function() {
+        $("#contactform").validate({
+          rules: {
+            name: {  // auran untuk nama
+              required: true,
+              minlength: 3
+            },
+            email: {  // aturan untuk email 
+              required: true, 
+              email: true 
+            },
+            pesan: {  // aturan untuk pesan
+              required: true, 
+              minlength: 10 
+            }
+          },
+          messages: {
+            name: {
+              required: "Masukkan nama kamu",
+              minlength: "Namamu harus berjumlah minimal 3 karakter"
+            },
+            email: {
+              required: "Masukkan alamat email kamu",
+              email: "Tolong masukkan alamat email yang valid"
+            },
+            pesan: {
+              required: "Tolong masukkan pesan",
+              minength: "Pesan harus minimal 10 karakter"
+            }
+          },
+          submitHandler: function(form) {  // submitHandler mengontrol apa yg akan terjadi stlh formulir valid 
+            alert("Formulir valid dan siap diserahkan!");  // pesan pop up yg akan ditampilkan di pengguna  
+            form.submit();  // ini akan mengirimkan formullir jika semua bidang valid
+          }
+        });
+      });
+    </script>
+    <!-- Akhir jQuery Validation --> 
 
     <!-- Footer -->
     <footer class="text-white text-center" id="bgfooter">
